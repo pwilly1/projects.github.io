@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF9F9;
+    color: #002642;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project {
+    background-color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project h2 {
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+}
+
+.project a {
+    color: #169873;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #002642;
+    color: #FAF9F9;
+}
+
+footer a {
+    color: #FABD00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
