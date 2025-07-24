@@ -1,35 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Coding Projects</title>
-    <link rel="stylesheet" href="style.css">
+  <title>My Coding Projects</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2e8a1e6e0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>My Coding Projects</h1>
-        <p>A collection of projects I've worked on to showcase my skills and experience.</p>
-    </header>
-    <main>
-        <section class="project">
-            <h2>Project 1: RealView</h2>
-            <p>Description: A real estate website that uses a database to populate listings page</p>
-            <h3><a href="https://pwilly1.github.io/RealView/">Client side website</a></h3>
-                        <h3><a href="https://github.com/pwilly1/RealView">Client side Code</a></h3>
-                        <h3><a href="https://github.com/pwilly1/react-backend">Server side code</a></h3>
-                        <h3><a href="https://react-backend-4pwh.onrender.com/">Render server side(will take a while to load)</a></h3>
-        </section>
-        <section class="project">
-            <h2>Project 2: LingoQuest</h2>
-            <p>Description: A language learning app with interactive lessons and quizzes.</p>
-            <h3><a href="https://github.com/WadeLittle/LingoQuest">Repository without GUI</a></h3>
-            <h3><a href="https://github.com/CadeStocker/LingoQuest2">Repository with GUI(I did not work on GUI)</a></h3>
-            <h3><a href="https://www.youtube.com/watch?v=NGEjiR2yx3U">Video demonstrating the app</a></h3>
-        </section>
-    </main>
-    <footer>
-        <p>Preston Willis</p>
-    </footer>
+  <header>
+    <h1>My Coding Projects</h1>
+    <p>A showcase of the projects I've developed to demonstrate my skills and growth.</p>
+  </header>
+  <main>
+      <div class="fade-in">
+    <section class="project">
+  <div class="project-media">
+    <img src="assets/images/game.png" alt="Screenshot of the C++ Game Engine">
+  </div>
+  <div class="project-content">
+    <h2><i class="fas fa-cogs"></i> C++ 2D Game Engine</h2>
+    <p class="overview">
+      A custom-built 2D game engine using SDL3, designed to support tile-based worlds, interactive entities, and real-time gameplay mechanics.
+    </p>
+    <ul class="details">
+      <li><strong>Built With:</strong> C++, SDL3, SDL3_image, SDL3_ttf, TinyXML2, CMake</li>
+      <li><strong>Features:</strong> 
+        <ul>
+          <li>Polymorphic entity system with Player/Enemy classes</li>
+          <li>Dynamic camera movement and zoom scaling</li>
+          <li>Tile-based world rendering and chunk parsing</li>
+          <li>Procedural terrain generation with cellular automata</li>
+          <li>Break/place tile mechanics and inventory</li>
+          <li>HUD rendering and map background switching</li>
+        </ul>
+      </li>
+      <li><strong>Highlights:</strong> Smooth game loop with delta time, real-time event handling, and pixel-perfect collision detection using AABB</li>
+    </ul>
+    <div class="links">
+      <a href="https://github.com/pwilly1/cppproject" target="_blank">GitHub Repository</a>
+    </div>
+  </div>
+    </section>
+      </div>
+        <div class="fade-in">
+    <section class="project">
+     <div class="project-media">
+    <img src="assets/images/website.png" alt="Screenshot of the RealView Website">
+  </div>
+  <div class="project-content">
+    <h2><i class="fas fa-home"></i> RealView – Real Estate Platform</h2>
+    <p class="overview">
+      A dynamic real estate website built with React, Node.js, and MongoDB, featuring full CRUD functionality and responsive design for both desktop and mobile.
+    </p>
+    <ul class="details">
+      <li><strong>Built With:</strong> React, Node.js, Express, MongoDB, Render, CSS Grid/Flexbox</li>
+      <li><strong>Features:</strong>
+        <ul>
+          <li>Admin dashboard to add, edit, and delete listings</li>
+          <li>MongoDB backend with secure API routing and user management</li>
+          <li>Render-hosted Node.js server with RESTful endpoints</li>
+          <li>Responsive front-end with reusable React components</li>
+          <li>Clean UI styled using CSS Flexbox, Grid, and media queries</li>
+        </ul>
+      </li>
+      <li><strong>Highlights:</strong> Full-stack CRUD operations, modular React codebase, mobile-first layout</li>
+    </ul>
+    <div class="links">
+      <a href="https://pwilly1.github.io/RealView/" target="_blank">Live Website</a>
+      <a href="https://github.com/pwilly1/RealView" target="_blank">Client Code</a>
+      <a href="https://github.com/pwilly1/react-backend" target="_blank">Server Code</a>
+      <a href="https://react-backend-4pwh.onrender.com/" target="_blank">Live Server</a>
+    </div>
+  </div>    
+      
+    </section>
+        </div>
+  </main>
+  <footer>
+    <p>Created by Preston Willis</p>
+  </footer>
+
+
+
+  <!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+  <script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".project-media img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+</script>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
+</script>
+
+
 </body>
 </html>
+
